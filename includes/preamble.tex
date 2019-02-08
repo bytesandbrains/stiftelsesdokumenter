@@ -1,0 +1,55 @@
+% packages
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{changepage}
+\usepackage{graphicx}
+
+% settings
+\title{Stiftelsesdokument}
+\date{\vspace{-5ex}}
+\renewcommand{\arraystretch}{1.5}
+\makeatletter
+\newlist{enum}{enumerate}{3}
+\setlist[enum,1]{label=\arabic*}
+\setlist[enum,2]{label=\arabic{enumi}.\arabic*}
+\setlist[enum,3]{label=\arabic{enumi}.\arabic{enumii}.\arabic*}
+
+
+% commands
+\newcommand*{\stiftelsesdato}[1]{\gdef\@stiftelsesdato{#1}}
+\newcommand*{\selskabsnavn}[1]{\gdef\@selskabsnavn{#1}}
+\newcommand*{\selskabskapital}[1]{\gdef\@selskabskapital{#1}}
+\newcommand*{\tegningskurs}[1]{\gdef\@tegningskurs{#1}}
+\newcommand*{\anpartnominelt}[1]{\gdef\@anpartnominelt{#1}}
+\newcommand*{\direktion}[1]{\gdef\@direktion{#1}}
+\newcommand*{\anpartstemmer}[1]{\gdef\@anpartstemmer{#1}}\gdef\@anpartstemmer{1 stemme}
+\newcommand*{\tegningsregel}[1]{\gdef\@tegningsregel{#1}}\gdef\@tegningsregel{Selskabet tegnes af direktionen.}
+\newcommand*{\formaal}[1]{\gdef\@formaal{#1}}
+
+\gdef\@stifterenstifterne{Stifteren}
+\gdef\@navnetop{}
+\gdef\@adressertop{}
+\gdef\@cvrnumretop{}
+
+\newcommand*{\navne}[1]{%
+    \gdef\@navne{#1}%
+    \gdef\@navnetop{Navn:\\}%
+    \gdef\@adressertop{Adresse:\\}%
+    \gdef\@stifterenstifterne{Stifterne}
+}
+\newcommand*{\navn}[1]{\gdef\@navne{#1}}
+\newcommand*{\adresse}[1]{\gdef\@adresser{#1}}
+\newcommand*{\adresser}[1]{\gdef\@adresser{#1}}
+\newcommand*{\cvrnummer}[1]{\gdef\@cvrnumre{#1}}
+
+\newcommand*{\cvrnumre}[1]{%
+    \gdef\@cvrnumre{#1}%
+    \gdef\@cvrnumreheading{CVR-nummer:\\}%
+}\gdef\@cvrnumre{}\gdef\@cvrnumreheading{}
+
+\newcommand*{\underskrifter}[1]{%
+    \gdef\@underskrifter{#1}%
+}
+\newcommand*{\underskrift}[1]{\gdef\@underskrifter{#1}}\gdef\@underskrifter{}

@@ -1,0 +1,115 @@
+% Stiftelsesdokumentet for et iværksætterselskab, anpartsselskab eller aktieselskab
+% skal underskrives af alle de fysiske personer eller virksomheder, der stifter selskabet.
+% Stiftelsesdokumentet skal indeholde selskabets vedtægter eller en henvisning til dem.
+
+\begin{document}
+\maketitle
+
+% OPLYSNINGER, STIFTELSESDOKUMENTET ALTID SKAL INDEHOLDE
+%
+% Det stiftelsesdokument, som stifteren eller stifterne underskriver for at starte selskabet,
+% skal indeholde følgende oplysninger:
+%
+% * Navn, bopæl og eventuelt CVR-nummer for selskabets stifter eller stiftere
+% * Tegningskursen for anparterne eller aktierne
+% * Fristerne for tegning og indbetaling af anparterne eller aktierne
+% * Fra hvilken bestemt dato, stiftelsen har retsvirkning
+% * Fra hvilken bestemt dato, stiftelsen har regnskabsmæssig virkning
+% * Om selskabet afholder stiftelsesomkostningerne og, hvis ja, de anslåede omkostninger
+%
+% Kilde: https://startvaekst.virk.dk/opstart/jura/selskabsdokumenter/stiftelsesdokument-ivs-aps-og
+
+% OPLYSNINGER, SOM VEDTÆGTERNE *SKAL* INDEHOLDE
+%
+% Selskabsloven indeholder regler om iværksætterselskaber, anpartsselskaber og aktieselskaber.
+% Efter selskabsloven skal selskabets vedtægter indeholde følgende oplysninger:
+%
+% * Selskabets navn (og binavne)
+% * Selskabets formål
+% * Selskabskapitalens størrelse
+% * Anparternes eller aktiernes antal eller pålydende værdi
+% * Anparternes eller aktiernes rettigheder
+% * Selskabets ledelsesorganer
+% * Indkaldelse til generalforsamling
+% * Regnskabsår
+% * Eventuelle beslutninger truffet af selskabets ejere
+% * Eventuelt ophørstidspunkt
+%
+% Kilde: https://startvaekst.virk.dk/opstart/jura/selskabsdokumenter/vedtaegter-ivs-aps-og
+
+
+\noindent Undertegnede
+
+\begin{adjustwidth}{-5em}{-5em}
+    \begin{center}
+        \begin{tabular}[t]{l}
+            \@navnetop\@navne
+        \end{tabular}
+        \begin{tabular}[t]{l}
+            \@adressertop\@adresser
+        \end{tabular}
+        \begin{tabular}[t]{l}\@cvrnumreheading\@cvrnumre\end{tabular}
+    \end{center}
+\end{adjustwidth}
+
+\noindent stifter herved et iværksætterselskab under navnet
+
+\begin{center}
+    {\@selskabsnavn}
+\end{center}
+
+\begin{enum}
+    \item Tegningskurs for anparter
+    \begin{enum}    
+        \item Tegningskursen for anparterne er \@tegningskurs.
+    \end{enum}
+
+
+    \item Tegning og indbetaling af anparter
+    \begin{enum}
+        \item Alle anparter skal være tegnet senest den \@stiftelsesdato.
+        
+        \item Alle anparter skal være fuldt indbetalt senest den \@stiftelsesdato.
+    \end{enum}
+
+
+    \item Stiftelsesdato
+    \begin{enum}
+        \item Stiftelsen af selskabet skal have retsvirkning pr. stiftelsesdatoen.
+    \end{enum}
+
+
+    \item Regnskabsår og revision
+    \begin{enum}
+        \item Stiftelsen af selskabet skal have regnskabsmæssig virkning fra datoen for stiftelsen.
+        \item Selskabets årsrapporter skal ikke revideres.
+    \end{enum}
+    
+
+    \item Stiftelsesomkostninger
+    \begin{enum}
+        \item \@stifterenstifterne\ afholder omkostningerne ved selskabets stiftelse.
+    \end{enum}
+
+    \item Vedtægter
+    \input{includes/vedtaegter.tex}
+\end{enum}
+
+\noindent Undertegnede stifter herved selskabet
+
+\renewcommand{\arraystretch}{2}
+\begin{center}
+    \begin{tabular}[t]{l}
+        Dato:\\ \@stiftelsesdato
+    \end{tabular}%
+    \begin{tabular}[t]{l}
+        Stifter: \\
+        \@navne
+    \end{tabular}%
+    \begin{tabular}[t]{l}
+        Underskrift: \\
+        \@underskrifter
+    \end{tabular}
+\end{center}
+
+\end{document}

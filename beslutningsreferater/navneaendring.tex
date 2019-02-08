@@ -1,0 +1,40 @@
+\documentclass{article}
+\input{includes/preamble-egenerklaering}
+
+\selskabskapital{DIN SELSKABSKAPITAL}
+\tegningskurs{DIN TEGNINGSKURS}
+\selskabsnavn{DIT SELSKABSNAVN IVS}
+\nytselskabsnavn(DIT NYE SELSKABSNAVN IVS)
+\navne{
+    DIT NAVN
+}
+\underskrift{
+    \includegraphics[height=1em]{images/path-to-signature-image.png} \\
+}
+
+\title{Beslutningsreferat om navneændring fra\\\@selskabsnavn\ til \\\@nytselskabsnavn\}
+
+\begin{document}
+\maketitle
+
+%
+\noindent Dirigent: DIN DIRIGENT \\
+
+\noindent Den \today afholdtes ekstraordinær generalforsamling i \\\@selskabsnavn\. \\
+
+\noindent Det blev enstemmigt besluttet at selskabet skal ændre navn til \\\@nytselskabsnavn\. \\
+
+
+\renewcommand{\arraystretch}{2}
+\begin{center}
+    \begin{tabular}[t]{ m{3cm} }
+        Dato:\\
+        \today
+    \end{tabular}
+    \begin{tabular}[t]{l}
+        Underskrift:\\
+        \@underskrift
+    \end{tabular}
+\end{center}
+
+\end{document}
